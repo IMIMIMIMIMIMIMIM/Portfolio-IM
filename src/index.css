@@ -1,1 +1,5 @@
 @import "./css/tailwind.css";
+@font-face {
+  font-family: "KyoboHandwriting2019";
+  src: url("./assets/fonts/KyoboHandwriting2019.ttf") format("truetype");
+}
