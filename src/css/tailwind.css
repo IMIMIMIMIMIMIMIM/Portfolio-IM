@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-kyobo;
+  }
+}
 /* Custom CSS */
 @layer components {
   .item-middle {
@@ -10,4 +15,18 @@
     align-items: center;
     min-height: 100vh;
   }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
 }
