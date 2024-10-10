@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         kyobo: ["KyoboHandwriting2019", "sans"],
       },
+      colors: {
+        coral: "#FF6F61", // 코랄 색상 추가
+      },
     },
   },
   plugins: [],
