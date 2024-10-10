@@ -19,10 +19,12 @@ const Title = () => {
   }, []);
 
   return (
-    <h1 className="text-4xl font-bold text-center">
-      {text}
-      <span className="animate-blink">|</span>
-    </h1>
+    <div className="h-screen overflow-auto flex justify-center items-center">
+      <h1 className="text-4xl font-bold text-center">
+        {text}
+        <span className="animate-blink">|</span>
+      </h1>
+    </div>
   );
 };
 
