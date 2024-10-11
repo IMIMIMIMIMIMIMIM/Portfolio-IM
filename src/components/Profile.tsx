@@ -10,9 +10,7 @@ const Profile = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            setIsVisible(true);
-          } else {
-            setIsVisible(false);
+            setIsVisible(true); // 슬라이드 애니메이션을 트리거
           }
         });
       },
@@ -32,17 +30,17 @@ const Profile = () => {
     <div className="h-screen flex flex-col justify-center items-center">
       <div
         ref={personalRef}
-        className={`flex flex-col items-center mb-4 transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 transition-transform duration-700 ${
           isVisible
-            ? "opacity-100 sm:translate-x-0 md:translate-x-[-100%]"
-            : "opacity-0 sm:translate-x-0 md:translate-x-[-200%]"
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-0"
+            : "opacity-0 sm:translate-x-0 translate-x-[-50%] md:translate-x-[-150%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-16 text-center my-5">
-          <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white px-2 text-2xl">
+        <div className="relative border-2 border-gray-400 rounded-lg p-16 text-center my-5 bg-white dark:bg-gray-900">
+          <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             프로필
           </span>
-          <ul className="list-disc text-center  text-xl">
+          <ul className="list-disc text-center text-xl">
             <li>임성민</li>
             <li>1997.11.24</li>
             <li>010-2389-8068</li>
@@ -53,14 +51,14 @@ const Profile = () => {
 
       <div
         ref={experienceRef}
-        className={`flex flex-col items-center mt-4 transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 transition-transform duration-700 ${
           isVisible
-            ? "opacity-100 sm:translate-x-0 md:translate-x-[50%]"
-            : "opacity-0 sm:translate-x-0 md:translate-x-[200%]"
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-0"
+            : "opacity-0 sm:translate-x-0 translate-x-[50%] md:translate-x-[150%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-8 text-center my-5">
-          <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white px-2 text-2xl">
+        <div className="relative border-2 border-gray-400 rounded-lg p-8 text-center my-5 bg-white dark:bg-gray-900">
+          <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             약력
           </span>
           <ul className="list-disc text-center text-xl">

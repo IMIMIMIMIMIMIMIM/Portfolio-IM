@@ -1,39 +1,57 @@
-import { useState, useRef, TouchEvent, WheelEvent } from "react";
+import { useState, useRef, useEffect, TouchEvent, WheelEvent } from "react";
 import Title from "./Title";
 import Profile from "./Profile";
+import Tech from "./Tech";
 
 const PageScroll = () => {
   const [section, setSection] = useState(0);
-  const sections = [<Title />, <Profile />];
+  const [isScrolling, setIsScrolling] = useState(false);
+  const sections = [<Title />, <Profile />, <Tech />];
 
   const handleScroll = (event: WheelEvent<HTMLDivElement>) => {
+    if (isScrolling) return;
+
+    // deltaY 값이 너무 작을 경우 무시 (노트북패드 문제 방지)
+    if (Math.abs(event.deltaY) < 30) return;
+
+    setIsScrolling(true);
     if (event.deltaY > 0) {
       setSection((prev) => Math.min(prev + 1, sections.length - 1));
     } else {
       setSection((prev) => Math.max(prev - 1, 0));
     }
+
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 500); // 스크롤 대기 시간 설정
   };
 
   const touchStartY = useRef<number | null>(null);
 
   const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
-    touchStartY.current = e.touches[0].clientY; // 터치 시작 Y 좌표 저장
+    touchStartY.current = e.touches[0].clientY;
   };
 
   const handleTouchEnd = (e: TouchEvent<HTMLDivElement>) => {
-    if (touchStartY.current === null) return; // 터치 시작 좌표가 없으면 종료
+    if (touchStartY.current === null || isScrolling) return;
 
-    const touchEndY = e.changedTouches[0].clientY; // 터치 종료 Y 좌표
-    const deltaY = touchStartY.current - touchEndY; // Y 좌표 차이
+    const touchEndY = e.changedTouches[0].clientY;
+    const deltaY = touchStartY.current - touchEndY;
 
-    // Y 좌표 차이에 따라 섹션 변경
+    if (Math.abs(deltaY) < 50) return; // 터치 이동이 너무 작을 경우 무시
+
+    setIsScrolling(true);
     if (deltaY > 50) {
-      setSection((prev) => Math.min(prev + 1, sections.length - 1)); // 아래로 스와이프
+      setSection((prev) => Math.min(prev + 1, sections.length - 1));
     } else if (deltaY < -50) {
-      setSection((prev) => Math.max(prev - 1, 0)); // 위로 스와이프
+      setSection((prev) => Math.max(prev - 1, 0));
     }
 
-    touchStartY.current = null; // 초기화
+    setTimeout(() => {
+      setIsScrolling(false);
+    }, 500);
+
+    touchStartY.current = null;
   };
 
   return (
