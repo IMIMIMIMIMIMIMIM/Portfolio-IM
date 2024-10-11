@@ -5,6 +5,10 @@
 @layer base {
   body {
     @apply font-kyobo;
+    @apply bg-white text-black;
+  }
+  body.dark {
+    @apply bg-gray-900 text-white;
   }
 }
 /* Custom CSS */
