@@ -3,3 +3,10 @@
   font-family: "KyoboHandwriting2019";
   src: url("./assets/fonts/KyoboHandwriting2019.ttf") format("truetype");
 }
+@font-face {
+  font-family: "chosun";
+  src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/Chosunilbo_myungjo.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,12 +1,13 @@
-import { useState, useRef, useEffect, TouchEvent, WheelEvent } from "react";
+import { useState, useRef, TouchEvent, WheelEvent } from "react";
 import Title from "./Title";
 import Profile from "./Profile";
 import Tech from "./Tech";
+import Intro from "./Intro";
 
 const PageScroll = () => {
   const [section, setSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const sections = [<Title />, <Profile />, <Tech />];
+  const sections = [<Title />, <Intro />, <Profile />, <Tech />];
 
   const handleScroll = (event: WheelEvent<HTMLDivElement>) => {
     if (isScrolling) return;

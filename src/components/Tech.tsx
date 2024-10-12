@@ -1,15 +1,21 @@
 import { useEffect, useState, useRef } from "react";
 import {
+  firebase,
   github,
   html,
   javascript,
   notion,
+  prettier,
   react,
+  reacthookform,
+  reactrouter,
   slack,
   styledcomponent,
   tailwindcss,
   typescript,
   vanillaextract,
+  vite,
+  zustand,
 } from "../assets/assets";
 
 const Tech = () => {
@@ -42,15 +48,15 @@ const Tech = () => {
     <div className="h-screen flex flex-col justify-center items-center">
       <div
         ref={personalRef}
-        className={`flex flex-col items-center my-1 transition-transform duration-700 ${
+        className={`flex flex-col items-center my-1 md:mb-[-80px] transition-transform duration-700 ${
           isVisible
-            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-50%]"
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-75%]"
             : "opacity-0 sm:translate-x-0 translate-x-[-100%] md:translate-x-[-200%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-8 text-center my-2">
-          <span className="absolute top-[-15px] left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
-            기술
+        <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
+          <span className="absolute top-[-15px] left-[35%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+            Frontend
           </span>
           <div className="grid grid-cols-2 gap-4 text-xl">
             <div className="flex justify-center items-center">
@@ -65,21 +71,35 @@ const Tech = () => {
             <div className="flex justify-center items-center">
               <img src={react} alt="React" className="h-12 w-12" />
             </div>
+            <div className="flex justify-center items-center">
+              <img
+                src={reacthookform}
+                alt="Reacthookform"
+                className="h-12 w-12"
+              />
+            </div>
+            <div className="flex justify-center items-center">
+              <img
+                src={reactrouter}
+                alt="Reactrouterreactrouter"
+                className="h-12 w-12"
+              />
+            </div>
           </div>
         </div>
       </div>
 
       <div
         ref={experienceRef}
-        className={`flex flex-col items-center my-1 transition-transform duration-700 ${
+        className={`flex flex-col items-center my-1 md:my-[-20px] transition-transform duration-700 ${
           isVisible
-            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[50%]"
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[75%]"
             : "opacity-0 sm:translate-x-0 translate-x-[100%] md:translate-x-[200%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-8 text-center my-2">
-          <span className="absolute top-[-15px] left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
-            CSS
+        <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
+          <span className="absolute top-[-15px] left-[15%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+            Css
           </span>
           <div className="grid grid-cols-2 gap-4 text-xl">
             <div className="flex justify-center items-center">
@@ -102,20 +122,47 @@ const Tech = () => {
           </div>
         </div>
       </div>
-
       <div
         ref={personalRef}
-        className={`flex flex-col items-center my-1 transition-transform duration-700 ${
+        className={`flex flex-col items-center my-1 md:my-[-20px] transition-transform duration-700 ${
           isVisible
-            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-50%]"
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-75%]"
             : "opacity-0 sm:translate-x-0 translate-x-[-100%] md:translate-x-[-200%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-8 text-center my-2">
+        <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
+          <span className="absolute top-[-15px] left-[40%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+            State&Data
+          </span>
+          <div className="grid grid-cols-2 gap-4 text-xl">
+            <div className="flex justify-center items-center">
+              <img src={zustand} alt="Zustand" className="h-12 w-12" />
+            </div>
+            <div className="flex justify-center items-center">
+              <img src={firebase} alt="Firebase" className="h-12 w-12" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        ref={experienceRef}
+        className={`flex flex-col items-center my-1 md:mt-[-20px] transition-transform duration-700 ${
+          isVisible
+            ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[75%]"
+            : "opacity-0 sm:translate-x-0 translate-x-[100%] md:translate-x-[200%]"
+        }`}
+      >
+        <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
           <span className="absolute top-[-15px] left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             ETC
           </span>
           <div className="grid grid-cols-2 gap-4 text-xl">
+            <div className="flex justify-center items-center">
+              <img src={vite} alt="Vite" className="h-12 w-12" />
+            </div>
+            <div className="flex justify-center items-center">
+              <img src={prettier} alt="Prettier" className="h-12 w-12" />
+            </div>
             <div className="flex justify-center items-center">
               <img src={github} alt="Github" className="h-12 w-12" />
             </div>
