@@ -5,10 +5,12 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        kyobo: ["KyoboHandwriting2019", "sans"],
+        kyobo: ["KyoboHandwriting2019", "sans-serif"],
+        chosun: ["chosun", "sans-serif"],
       },
+
       colors: {
-        coral: "#FF6F61", // 코랄 색상 추가
+        // coral: "#FF6F61", // 코랄 색상 추가
       },
     },
   },

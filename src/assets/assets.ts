@@ -12,6 +12,10 @@ import vanillaextract from "./images/vanilla-extract.svg";
 import zustand from "./images/zustand.svg";
 import moon from "./images/moon.svg";
 import sun from "./images/sun.svg";
+import vite from "./images/vitejs.svg";
+import prettier from "./images/prettier.svg";
+import reacthookform from "./images/reacthookform.svg";
+import reactrouter from "./images/reactrouter.svg";
 
 export {
   firebase,
@@ -28,4 +32,8 @@ export {
   zustand,
   moon,
   sun,
+  vite,
+  prettier,
+  reacthookform,
+  reactrouter,
 };

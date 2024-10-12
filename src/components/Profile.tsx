@@ -45,6 +45,16 @@ const Profile = () => {
             <li>1997.11.24</li>
             <li>010-2389-8068</li>
             <li>ism1124@naver.com</li>
+            <li>
+              <a
+                href="https://github.com/IMIMIMIMIMIMIMIM"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-500 hover:text-blue-700 "
+              >
+                GitHub
+              </a>
+            </li>
           </ul>
         </div>
       </div>
