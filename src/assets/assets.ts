@@ -16,6 +16,11 @@ import vite from "./images/vitejs.svg";
 import prettier from "./images/prettier.svg";
 import reacthookform from "./images/reacthookform.svg";
 import reactrouter from "./images/reactrouter.svg";
+import perfitt from "./logoImages/perfitt.webp";
+import tfa from "./logoImages/tfa.png";
+import murder from "./logoImages/murder.png";
+import lotto from "./logoImages/lotto.png";
+import im from "./logoImages/IM.png";
 
 export {
   firebase,
@@ -36,4 +41,9 @@ export {
   prettier,
   reacthookform,
   reactrouter,
+  perfitt,
+  murder,
+  lotto,
+  tfa,
+  im,
 };

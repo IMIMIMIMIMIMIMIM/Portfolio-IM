@@ -1,13 +1,22 @@
-import { useState, useRef, TouchEvent, WheelEvent } from "react";
+import { useState, useRef, TouchEvent, WheelEvent, useEffect } from "react";
 import Title from "./Title";
 import Profile from "./Profile";
 import Tech from "./Tech";
 import Intro from "./Intro";
+import Project from "./Project";
+import Finish from "./Finish";
 
 const PageScroll = () => {
   const [section, setSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
-  const sections = [<Title />, <Intro />, <Profile />, <Tech />];
+  const sections = [
+    <Title />,
+    <Intro />,
+    <Profile />,
+    <Tech />,
+    <Project />,
+    <Finish />,
+  ];
 
   const handleScroll = (event: WheelEvent<HTMLDivElement>) => {
     if (isScrolling) return;
@@ -16,11 +25,11 @@ const PageScroll = () => {
     if (Math.abs(event.deltaY) < 30) return;
 
     setIsScrolling(true);
-    if (event.deltaY > 0) {
-      setSection((prev) => Math.min(prev + 1, sections.length - 1));
-    } else {
-      setSection((prev) => Math.max(prev - 1, 0));
-    }
+    setSection((prev) =>
+      event.deltaY > 0
+        ? Math.min(prev + 1, sections.length - 1)
+        : Math.max(prev - 1, 0)
+    );
 
     setTimeout(() => {
       setIsScrolling(false);
@@ -42,11 +51,11 @@ const PageScroll = () => {
     if (Math.abs(deltaY) < 50) return; // 터치 이동이 너무 작을 경우 무시
 
     setIsScrolling(true);
-    if (deltaY > 50) {
-      setSection((prev) => Math.min(prev + 1, sections.length - 1));
-    } else if (deltaY < -50) {
-      setSection((prev) => Math.max(prev - 1, 0));
-    }
+    setSection((prev) =>
+      deltaY > 50
+        ? Math.min(prev + 1, sections.length - 1)
+        : Math.max(prev - 1, 0)
+    );
 
     setTimeout(() => {
       setIsScrolling(false);
@@ -54,6 +63,29 @@ const PageScroll = () => {
 
     touchStartY.current = null;
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (isScrolling) return;
+
+      if (event.key === "ArrowDown") {
+        setIsScrolling(true);
+        setSection((prev) => Math.min(prev + 1, sections.length - 1));
+      } else if (event.key === "ArrowUp") {
+        setIsScrolling(true);
+        setSection((prev) => Math.max(prev - 1, 0));
+      }
+      setTimeout(() => {
+        setIsScrolling(false);
+      }, 500);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isScrolling, sections.length]);
 
   return (
     <div
