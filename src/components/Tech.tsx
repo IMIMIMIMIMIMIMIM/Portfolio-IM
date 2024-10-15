@@ -48,7 +48,7 @@ const Tech = () => {
     <div className="h-screen flex flex-col justify-center items-center">
       <div
         ref={personalRef}
-        className={`flex flex-col items-center my-1 md:mb-[-30px] transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 md:mb-[-30px] transition-transform duration-700 ${
           isVisible
             ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-65%]"
             : "opacity-0 sm:translate-x-0 translate-x-[-100%] md:translate-x-[-200%]"
@@ -91,7 +91,7 @@ const Tech = () => {
 
       <div
         ref={experienceRef}
-        className={`flex flex-col items-center my-1 md:my-[-20px] transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 md:my-[-20px] transition-transform duration-700 ${
           isVisible
             ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[65%]"
             : "opacity-0 sm:translate-x-0 translate-x-[100%] md:translate-x-[200%]"
@@ -124,7 +124,7 @@ const Tech = () => {
       </div>
       <div
         ref={personalRef}
-        className={`flex flex-col items-center my-1 md:mb-[-20px] transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 md:mb-[-20px] transition-transform duration-700 ${
           isVisible
             ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[-90%]"
             : "opacity-0 sm:translate-x-0 translate-x-[-100%] md:translate-x-[-200%]"
@@ -146,7 +146,7 @@ const Tech = () => {
       </div>
       <div
         ref={experienceRef}
-        className={`flex flex-col items-center my-1 md:mt-[-30px] transition-transform duration-700 ${
+        className={`flex flex-col items-center my-2 md:mt-[-30px] transition-transform duration-700 ${
           isVisible
             ? "opacity-100 sm:translate-x-0 translate-x-0 md:translate-x-[65%]"
             : "opacity-0 sm:translate-x-0 translate-x-[100%] md:translate-x-[200%]"

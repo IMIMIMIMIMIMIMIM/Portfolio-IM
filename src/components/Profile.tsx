@@ -36,16 +36,16 @@ const Profile = () => {
             : "opacity-0 sm:translate-x-0 translate-x-[-50%] md:translate-x-[-150%]"
         }`}
       >
-        <div className="relative border-2 border-gray-400 rounded-lg p-16 text-center my-5 bg-white dark:bg-gray-900">
+        <div className="relative border-2 border-gray-400 rounded-lg p-12 text-center my-5 bg-white dark:bg-gray-900">
           <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             프로필
           </span>
-          <ul className="list-disc text-center text-xl">
-            <li>임성민</li>
-            <li>1997.11.24</li>
-            <li>010-2389-8068</li>
-            <li>ism1124@naver.com</li>
-            <li>
+          <ul className="list-disc text-center text-xl ">
+            <li className="my-2">임성민</li>
+            <li className="my-2">1997.11.24</li>
+            <li className="my-2">010-2389-8068</li>
+            <li className="my-2">ism1124@naver.com</li>
+            <li className="my-2">
               <a
                 href="https://github.com/IMIMIMIMIMIMIMIM"
                 target="_blank"
@@ -72,9 +72,9 @@ const Profile = () => {
             약력
           </span>
           <ul className="list-disc text-center text-xl">
-            <li>컴퓨터 공학과 졸업</li>
-            <li>플레이데이터 빅데이터 13기 부트캠프 수료</li>
-            <li>웅진 스나이퍼팩토리 React 2기 수료</li>
+            <li className="my-2">컴퓨터 공학과 졸업</li>
+            <li className="my-2">플레이데이터 빅데이터 13기 부트캠프 수료</li>
+            <li className="my-2">웅진 스나이퍼팩토리 React 2기 수료</li>
           </ul>
         </div>
       </div>
