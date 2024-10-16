@@ -45,7 +45,7 @@ const Tech = () => {
   }, []);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col justify-center items-center font-cafe24">
       <div
         ref={personalRef}
         className={`flex flex-col items-center my-2 md:mb-[-30px] transition-transform duration-700 ${
@@ -55,7 +55,7 @@ const Tech = () => {
         }`}
       >
         <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
-          <span className="absolute top-[-15px] left-[35%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+          <span className="absolute top-[-15px] left-[30%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-xl">
             Frontend
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">
@@ -98,7 +98,7 @@ const Tech = () => {
         }`}
       >
         <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
-          <span className="absolute top-[-15px] left-[15%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+          <span className="absolute top-[-15px] left-[15%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-xl">
             Css
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">
@@ -131,7 +131,7 @@ const Tech = () => {
         }`}
       >
         <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
-          <span className="absolute top-[-15px] left-[45%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+          <span className="absolute top-[-15px] left-[45%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-xl">
             State&Data
           </span>
           <div className="grid grid-cols-2 gap-4 text-xl">
@@ -153,7 +153,7 @@ const Tech = () => {
         }`}
       >
         <div className="relative border-2 border-gray-400 rounded-lg p-6 text-center my-1">
-          <span className="absolute top-[-15px] left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
+          <span className="absolute top-[-15px] left-[15%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-xl">
             ETC
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">

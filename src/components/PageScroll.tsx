@@ -9,17 +9,18 @@ import Finish from "./Finish";
 const PageScroll = () => {
   const [section, setSection] = useState(0);
   const [isScrolling, setIsScrolling] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const sections = [
     <Title />,
     <Intro />,
     <Profile />,
     <Tech />,
-    <Project />,
+    <Project onModalChange={setIsModalOpen} />,
     <Finish />,
   ];
 
   const handleScroll = (event: WheelEvent<HTMLDivElement>) => {
-    if (isScrolling) return;
+    if (isScrolling || isModalOpen) return;
 
     // deltaY 값이 너무 작을 경우 무시 (노트북패드 문제 방지)
     if (Math.abs(event.deltaY) < 30) return;
@@ -43,7 +44,7 @@ const PageScroll = () => {
   };
 
   const handleTouchEnd = (e: TouchEvent<HTMLDivElement>) => {
-    if (touchStartY.current === null || isScrolling) return;
+    if (touchStartY.current === null || isScrolling || isModalOpen) return;
 
     const touchEndY = e.changedTouches[0].clientY;
     const deltaY = touchStartY.current - touchEndY;
@@ -66,7 +67,7 @@ const PageScroll = () => {
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
-      if (isScrolling) return;
+      if (isScrolling || isModalOpen) return;
 
       if (event.key === "ArrowDown") {
         setIsScrolling(true);
@@ -85,7 +86,7 @@ const PageScroll = () => {
     return () => {
       window.removeEventListener("keydown", handleKeyDown);
     };
-  }, [isScrolling, sections.length]);
+  }, [isScrolling, isModalOpen, sections.length]);
 
   return (
     <div

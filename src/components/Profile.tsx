@@ -27,7 +27,7 @@ const Profile = () => {
   }, []);
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center">
+    <div className="h-screen flex flex-col justify-center items-center font-cafe24">
       <div
         ref={personalRef}
         className={`flex flex-col items-center my-2 transition-transform duration-700 ${
@@ -40,7 +40,7 @@ const Profile = () => {
           <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             프로필
           </span>
-          <ul className="list-disc text-center text-xl ">
+          <ul className="list-disc text-center text-md md:text-xl">
             <li className="my-2">임성민</li>
             <li className="my-2">1997.11.24</li>
             <li className="my-2">010-2389-8068</li>
@@ -71,7 +71,7 @@ const Profile = () => {
           <span className="absolute top-[-15px] left-[20%] sm:left-[20%] transform -translate-x-1/2 bg-white dark:bg-gray-900 px-2 text-2xl">
             약력
           </span>
-          <ul className="list-disc text-center text-xl">
+          <ul className="list-disc text-center text-md md:text-xl">
             <li className="my-2">컴퓨터 공학과 졸업</li>
             <li className="my-2">플레이데이터 빅데이터 13기 부트캠프 수료</li>
             <li className="my-2">웅진 스나이퍼팩토리 React 2기 수료</li>

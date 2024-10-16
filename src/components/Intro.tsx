@@ -1,7 +1,7 @@
 const Intro = () => {
   return (
     <div className="relative flex flex-col items-end p-4 border-4 border-gray-400 rounded-lg font-chosun mx-4 sm:mx-0">
-      <span className="absolute top-[-15px] left-[20%] sm:left-[15%] transform -translate-x-1/2 bg-white font-bold font-kyobo dark:bg-gray-900 px-2 text-2xl">
+      <span className="absolute top-[-15px] left-[20%] sm:left-[15%] transform -translate-x-1/2 bg-white font-bold font-cafe24 dark:bg-gray-900 px-2 text-2xl">
         I'm
       </span>
       <p className="text-xl my-4">대화를 좋아하고,</p>
