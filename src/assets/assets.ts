@@ -28,6 +28,11 @@ import IMsc2 from "./screenshots/IM2.png";
 import lottosc from "./screenshots/lottosc.png";
 import murdersc from "./screenshots/murdersc.png";
 import tfasc from "./screenshots/tfasc.png";
+import tfaretro from "./retroimages/tfaretro.png";
+import perfittretro from "./retroimages/perfittretro.png";
+import portfolioretro from "./retroimages/portfolioretro.png";
+import murderretro from "./retroimages/murderretro.png";
+import lottoretro from "./retroimages/lottoretro.png";
 
 export {
   firebase,
@@ -60,4 +65,9 @@ export {
   lottosc,
   murdersc,
   tfasc,
+  tfaretro,
+  perfittretro,
+  portfolioretro,
+  murderretro,
+  lottoretro,
 };

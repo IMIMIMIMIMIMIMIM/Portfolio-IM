@@ -7,6 +7,8 @@ export default {
       fontFamily: {
         kyobo: ["KyoboHandwriting2019", "sans-serif"],
         chosun: ["chosun", "sans-serif"],
+        pretendard: ["pretendard", "sans-serif"],
+        cafe24: ["cafe24", "sans-serif"],
       },
 
       colors: {
