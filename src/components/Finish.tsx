@@ -6,7 +6,7 @@ const Finish = () => {
       </div>
       <footer className="p-4 bg-gray-800 text-white w-screen text-end">
         <p>&copy; {new Date().getFullYear()} frontend developer portfolio</p>
-        <p>designed by IM.</p>
+        <p>designed by IM</p>
       </footer>
     </div>
   );

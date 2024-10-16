@@ -1,14 +1,11 @@
 const Intro = () => {
   return (
-    <div className="relative flex flex-col items-end p-4 border-4 border-gray-400 rounded-lg font-600  font-chosun mx-4 sm:mx-0">
+    <div className="relative flex flex-col items-end p-4 border-4 border-gray-400 rounded-lg font-chosun mx-4 sm:mx-0">
       <span className="absolute top-[-15px] left-[20%] sm:left-[15%] transform -translate-x-1/2 bg-white font-bold font-kyobo dark:bg-gray-900 px-2 text-2xl">
         I'm
       </span>
-      <p className="text-xl my-4">사용자 경험을 최우선으로 생각하며,</p>
-      <p className="text-xl my-4">
-        웹사이트가 어떻게 사용자의 마음을 사로잡을 수 있는지를 고민하는 걸
-        좋아합니다.
-      </p>
+      <p className="text-xl my-4">대화를 좋아하고,</p>
+      <p className="text-xl my-4">상상을 현실로 만드는 것을 즐기는 편입니다.</p>
 
       <p className="text-xl my-4">
         개발을 통해 사용자와의 연결고리를 만드는 것,

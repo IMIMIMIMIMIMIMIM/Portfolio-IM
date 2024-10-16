@@ -21,6 +21,13 @@ import tfa from "./logoImages/tfa.png";
 import murder from "./logoImages/murder.png";
 import lotto from "./logoImages/lotto.png";
 import im from "./logoImages/IM.png";
+import perfittsc1 from "./screenshots/perfittsc1.png";
+import perfittsc2 from "./screenshots/perfittsc2.png";
+import IMsc1 from "./screenshots/IM1.png";
+import IMsc2 from "./screenshots/IM2.png";
+import lottosc from "./screenshots/lottosc.png";
+import murdersc from "./screenshots/murdersc.png";
+import tfasc from "./screenshots/tfasc.png";
 
 export {
   firebase,
@@ -46,4 +53,11 @@ export {
   lotto,
   tfa,
   im,
+  perfittsc1,
+  perfittsc2,
+  IMsc1,
+  IMsc2,
+  lottosc,
+  murdersc,
+  tfasc,
 };

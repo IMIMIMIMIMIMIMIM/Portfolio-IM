@@ -1,5 +1,18 @@
 import { useState } from "react";
-import { im, lotto, murder, perfitt, tfa } from "../assets/assets";
+import {
+  im,
+  IMsc1,
+  IMsc2,
+  lotto,
+  lottosc,
+  murder,
+  murdersc,
+  perfitt,
+  perfittsc1,
+  perfittsc2,
+  tfa,
+  tfasc,
+} from "../assets/assets";
 
 type Project = {
   name: string;
@@ -10,6 +23,7 @@ type Project = {
   people: number;
   link?: string;
   image: string;
+  screenshot?: string[];
 };
 
 const ProjectComponent = () => {
@@ -28,6 +42,7 @@ const ProjectComponent = () => {
       people: 5,
       link: "11-supreme.vercel.app",
       image: perfitt,
+      screenshot: [perfittsc1, perfittsc2],
     },
     {
       name: "TFA",
@@ -37,16 +52,18 @@ const ProjectComponent = () => {
       date: "22-12-01 ~ 22-12-30",
       people: 6,
       image: tfa,
+      screenshot: [tfasc],
     },
     {
       name: "Portfolio",
-      description: "이 포트폴리오는 나의 작업과 기술을 보여주는 공간입니다.",
+      description: "포트폴리오는 나의 작업과 기술을 보여주는 공간입니다.",
       stack: "React, Typescript, Vite, Tailwindcss",
       url: "https://github.com/IMIMIMIMIMIMIMIM/Portfolio-IM",
       date: "24-10-08 ~ 24-10-17",
       people: 1,
-      link: "",
+      link: "https://imimimimimimimim.github.io/Portfolio-IM/",
       image: im,
+      screenshot: [IMsc1, IMsc2],
     },
     {
       name: "Findmurder",
@@ -55,8 +72,9 @@ const ProjectComponent = () => {
       url: "https://github.com/IMIMIMIMIMIMIMIM/find-murder",
       date: "23-01-04 ~ 23-02-11",
       people: 1,
-      link: "",
+      link: "https://imimimimimimimim.github.io/find-murder/",
       image: murder,
+      screenshot: [murdersc],
     },
     {
       name: "Lotto",
@@ -65,8 +83,9 @@ const ProjectComponent = () => {
       url: "https://github.com/IMIMIMIMIMIMIMIM/lotto",
       date: "23-06-08 ~ 23-07-21",
       people: 1,
-      link: "",
+      link: "https://imimimimimimimim.github.io/lotto/",
       image: lotto,
+      screenshot: [lottosc],
     },
   ];
 
@@ -84,7 +103,7 @@ const ProjectComponent = () => {
 
   return (
     <div className="flex justify-center items-center h-screen relative">
-      <div className="grid grid-cols-2 xl:grid-cols-5 gap-4 w-screen xl:h-2/3 p-6">
+      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 w-screen md:h-2/3 p-6">
         {projects.map((project) => (
           <div
             key={project.name}
@@ -106,15 +125,38 @@ const ProjectComponent = () => {
           onClick={handleCloseModal}
         >
           <div
-            className="bg-white rounded-lg p-6 relative w-11/12 md:w-2/3"
+            className="bg-white rounded-lg p-6 relative w-11/12 md:w-2/3 md:h-3/4"
             onClick={(e) => e.stopPropagation()}
           >
             <h2 className="text-2xl mb-4">{selectedProject.name}</h2>
-            <p>{selectedProject.description}</p>
-            <p>사용 기술: {selectedProject.stack}</p>
-            <p>개발 기간: {selectedProject.date}</p>
-            <p>인원 : {selectedProject.people}</p>
-            <div className="flex justify-end gap-4 mt-4">
+            <div className="flex flex-col md:flex-row">
+              <div className="w-full md:w-1/2">
+                <p className="leading-8">{selectedProject.description}</p>
+                <p className="leading-8">사용 기술: {selectedProject.stack}</p>
+                <p className="leading-8">개발 기간: {selectedProject.date}</p>
+                <p className="leading-8">인원 : {selectedProject.people}</p>
+              </div>
+              <div className="flex w-full md:w-1/2">
+                {selectedProject.screenshot?.map(
+                  (
+                    image,
+                    index // 이미지 배열 반복
+                  ) => (
+                    <div
+                      key={index}
+                      className="my-2 flex justify-center items-center"
+                    >
+                      <img
+                        src={image}
+                        alt={`${selectedProject.name} 스크린샷 ${index + 1}`}
+                        className="max-w-full h-auto object-contain w-2/3 border-2 rounded-lg"
+                      />
+                    </div>
+                  )
+                )}
+              </div>
+            </div>
+            <div className="absolute bottom-2 right-4 flex gap-4">
               {selectedProject.link && (
                 <a
                   href={selectedProject.link}
