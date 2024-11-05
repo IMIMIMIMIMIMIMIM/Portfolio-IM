@@ -57,12 +57,12 @@ const Project = ({
       name: "Perfitt-size",
       desc: "발 사이즈를 측정하고 신발을 추천해주는 앱입니다.",
       stack:
-        "React Typescript Vite Vanilla-extract Firebase Zustand React-router",
-      part: "신발장",
-      url: "https://github.com/IMIMIMIMIMIMIMIM/perfitt-size",
+        "React, Typescript, Vite, Vanilla-extract, Firebase, Zustand, React-router",
+      part: "온보딩ui, 신발장, 토스트 메시지, 프로필 이미지, 렌더링 및 SEO 최적화",
+      url: "https://github.com/Perfitt-11-supreme/11-supreme",
       date: "24-09-02 ~ 24-09-27",
       people: "5",
-      link: "11-supreme.vercel.app",
+      link: "https://11-supreme.vercel.app",
       image: perfitt,
       screenshot: [perfittsc1, perfittsc2],
       retro: perfittretro,
@@ -71,7 +71,7 @@ const Project = ({
     {
       name: "TFA",
       desc: "여행경로 추천 및 여행 플랜을 만들어주는 사이트입니다.",
-      stack: "React Typescript Styled-components React-router",
+      stack: "React, Typescript, Styled-components, React-router",
       part: "메인페이지, 마이페이지, 로그인, 회원가입, 비밀번호 변경, 추천페이지, 게시판 상세페이지",
       url: "https://github.com/Trip-Full-Accel/tfa-FE",
       date: "22-12-01 ~ 22-12-30",
@@ -83,7 +83,7 @@ const Project = ({
     {
       name: "Portfolio",
       desc: "포트폴리오입니다.",
-      stack: "React Typescript Vite Tailwindcss",
+      stack: "React, Typescript, Vite, Tailwindcss",
       url: "https://github.com/IMIMIMIMIMIMIMIM/Portfolio-IM",
       date: "24-10-08 ~ 24-10-17",
       people: "1",
@@ -95,7 +95,7 @@ const Project = ({
     {
       name: "Findmurder",
       desc: "추리를 통하여 범인을 추적하는 게임입니다.",
-      stack: "React Javascript Styled-components React-Router",
+      stack: "React, Javascript, Styled-components, React-Router",
       url: "https://github.com/IMIMIMIMIMIMIMIM/find-murder",
       date: "23-01-04 ~ 23-02-11",
       people: "1",
@@ -107,7 +107,7 @@ const Project = ({
     {
       name: "Lotto",
       desc: "로또 번호 생성 및 분석을 도와주는 간단한 앱입니다.",
-      stack: "React Typescript Styled-components",
+      stack: "React, Typescript, Styled-components",
       url: "https://github.com/IMIMIMIMIMIMIMIM/lotto",
       date: "23-06-08 ~ 23-07-21",
       people: "1",
@@ -160,13 +160,17 @@ const Project = ({
             {modalPage === 0 ? (
               <div className="flex flex-col md:flex-row">
                 <div className="w-full md:w-1/2">
-                  <p className="leading-8">{selectedProject.desc}</p>
-                  <p className="leading-8">
+                  <p className="leading-6 pb-1.5">{selectedProject.desc}</p>
+                  <p className="leading-6  pb-1.5">
                     사용 기술: {selectedProject.stack}
                   </p>
-                  <p className="leading-8">개발 기간: {selectedProject.date}</p>
-                  <p className="leading-8">인원 : {selectedProject.people}</p>
-                  <p className="leading-8">
+                  <p className="leading-6 pb-1.5">
+                    개발 기간: {selectedProject.date}
+                  </p>
+                  <p className="leading-6 pb-1.5">
+                    인원 : {selectedProject.people}
+                  </p>
+                  <p className="leading-6 pb-1.5">
                     {selectedProject.part && `파트 : ${selectedProject.part}`}
                   </p>
                 </div>
