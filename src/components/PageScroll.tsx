@@ -13,9 +13,9 @@ const PageScroll = () => {
   const sections = [
     <Title />,
     <Intro />,
-    <Profile />,
     <Tech />,
     <Project onModalChange={setIsModalOpen} />,
+    <Profile />,
     <Finish />,
   ];
 

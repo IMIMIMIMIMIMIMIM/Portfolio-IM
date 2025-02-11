@@ -134,13 +134,13 @@ const Project = ({
         {projects.map((project) => (
           <div
             key={project.name}
-            className="col-span-1 flex justify-center items-center p-4 border-2 rounded-lg border-gray-400 cursor-pointer aspect-square xl:aspect-auto"
+            className="col-span-1 flex justify-center items-center p-4 border-2 rounded-lg bg-white border-gray-400 cursor-pointer aspect-square xl:aspect-auto"
             onClick={() => handleOpenModal(project)}
           >
             <img
               src={project.image}
               alt={project.name}
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain rounded-lg scale-90"
             />
           </div>
         ))}

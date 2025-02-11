@@ -59,30 +59,46 @@ const Tech = () => {
             Frontend
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">
-            <div className="flex justify-center items-center">
-              <img src={javascript} alt="JavaScript" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={javascript}
+                alt="JavaScript"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={typescript} alt="TypeScript" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={typescript}
+                alt="TypeScript"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={html} alt="HTML" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={html}
+                alt="HTML"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={react} alt="React" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={react}
+                alt="React"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
               <img
                 src={reacthookform}
                 alt="Reacthookform"
-                className="h-12 w-12"
+                className="h-12 w-12 rounded-md scale-90"
               />
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
               <img
                 src={reactrouter}
                 alt="Reactrouterreactrouter"
-                className="h-12 w-12"
+                className="h-12 w-12 rounded-md scale-90"
               />
             </div>
           </div>
@@ -102,21 +118,25 @@ const Tech = () => {
             Css
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
               <img
                 src={styledcomponent}
                 alt="Styledcomponent"
-                className="h-12 w-12"
+                className="h-12 w-12 rounded-md scale-90"
               />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={tailwindcss} alt="Tailwindcss" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={tailwindcss}
+                alt="Tailwindcss"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
               <img
                 src={vanillaextract}
                 alt="Vanillaextract"
-                className="h-12 w-12"
+                className="h-12 w-12 rounded-md scale-90"
               />
             </div>
           </div>
@@ -135,11 +155,19 @@ const Tech = () => {
             State&Data
           </span>
           <div className="grid grid-cols-2 gap-4 text-xl">
-            <div className="flex justify-center items-center">
-              <img src={zustand} alt="Zustand" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={zustand}
+                alt="Zustand"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={firebase} alt="Firebase" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={firebase}
+                alt="Firebase"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
           </div>
         </div>
@@ -157,20 +185,40 @@ const Tech = () => {
             ETC
           </span>
           <div className="grid grid-cols-3 gap-4 text-xl">
-            <div className="flex justify-center items-center">
-              <img src={vite} alt="Vite" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={vite}
+                alt="Vite"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={prettier} alt="Prettier" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={prettier}
+                alt="Prettier"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={github} alt="Github" className="h-12 w-12" />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={github}
+                alt="Github"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={notion} alt="Notion" className="h-12 w-12 " />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={notion}
+                alt="Notion"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
-            <div className="flex justify-center items-center">
-              <img src={slack} alt="Slack" className="h-12 w-12 " />
+            <div className="flex justify-center items-center bg-white rounded-md scale-110">
+              <img
+                src={slack}
+                alt="Slack"
+                className="h-12 w-12 rounded-md scale-90"
+              />
             </div>
           </div>
         </div>
