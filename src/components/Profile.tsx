@@ -41,11 +41,11 @@ const Profile = () => {
             프로필
           </span>
           <ul className="list-disc text-center text-md md:text-xl">
-            <li className="my-2">임성민</li>
-            <li className="my-2">1997.11.24</li>
-            <li className="my-2">010-2389-8068</li>
-            <li className="my-2">ism1124@naver.com</li>
-            <li className="my-2">
+            <li className="my-2 list-none">임성민</li>
+            <li className="my-2 list-none">1997.11.24</li>
+            <li className="my-2 list-none">010-2389-8068</li>
+            <li className="my-2 list-none">ism1124@naver.com</li>
+            <li className="my-2 list-none">
               <a
                 href="https://github.com/IMIMIMIMIMIMIMIM"
                 target="_blank"
@@ -72,9 +72,13 @@ const Profile = () => {
             약력
           </span>
           <ul className="list-disc text-center text-md md:text-xl">
-            <li className="my-2">컴퓨터 공학과 졸업</li>
-            <li className="my-2">플레이데이터 빅데이터 13기 부트캠프 수료</li>
-            <li className="my-2">웅진 스나이퍼팩토리 React 2기 수료</li>
+            <li className="my-2 list-none">컴퓨터 공학과 졸업</li>
+            <li className="my-2 list-none">
+              플레이데이터 빅데이터 13기 부트캠프 수료
+            </li>
+            <li className="my-2 list-none">
+              웅진 스나이퍼팩토리 React 2기 수료
+            </li>
           </ul>
         </div>
       </div>
